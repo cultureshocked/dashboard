@@ -133,8 +133,9 @@ a {
     box-sizing: border-box;
     padding: 15px;
     display: grid;
-    grid-template: 6fr 5fr / 4fr 1fr;
+    grid-template: 1fr / 4fr 1fr;
     gap: 15px;
+    overflow: scroll
 }
 
 .greeting {
@@ -243,7 +244,7 @@ h5 {
 
 .card {
     border-radius: 7px;
-    border-left: solid 7px #2ecc71;
+    border-left: solid 7px #16a085;
     width: 100%;
     height: 100%;
     background-color: #fff;
@@ -251,22 +252,17 @@ h5 {
     box-sizing: border-box;
 }
 
-.announcements {
-    grid-area: 1 / 2 / 2 / 3;
-}
-
-.trending {
-    grid-area: 2 / 2 / 3 / 3;
-}
-
 .card-controls {
+    position: relative;
     display: flex;
     justify-content: right;
-
 }
 
 .card p {
     height: 140px;
+    line-height: 20px;
+    -webkit-line-clamp: 7;
+    padding: 0px 20px 0px 20px;
 }
 
 .card-button svg {
@@ -274,4 +270,52 @@ h5 {
     height: 40px;
     fill: #334155;
     padding: 3px;
+}
+
+.frame {
+    width: 100%;
+    border-radius: 7px;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 40px;
+    box-shadow: 2px 2px 2px 2px #ccc;
+}
+
+.announce-card {
+    height: 80px;
+}
+
+p {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    color: #374151;
+}
+
+.announce-card p {
+    -webkit-line-clamp: 2;
+}
+
+hr {
+    color: #ccc;
+    margin: auto;
+    margin: 10px 0px;
+}
+
+.trending {
+    padding-top: 20px;
+}
+
+.trend-card {
+    display: flex;
+
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
 }
